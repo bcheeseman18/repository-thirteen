@@ -67,15 +67,19 @@ items = [
 // }
 // console.log(addTax(items)); 
 
-function addTax(prices) {
-    return prices * .1;
+function addTax(foods) {
+    
+    function tax_it(food) {
+        return {
+            name: food.name, 
+            price: food.price * 1.1, 
+        }; 
+    }
+    return foods.map(tax_it); 
+    //could be return food
 }
-
-function getName(names) {
-    return names.name;
-}
-console.log(items.map(getName, addTax));
-
+console.log(items.map(items));
+//could be console.log(items.map(tax_it))
 
 /**
  * Problem #3
@@ -114,15 +118,26 @@ console.log(array);
 
 // let string = 'content management system'; 
 
-function abbrev(phrase) {
-    let str = phrase.split(' ');
-    let newStr = [];
-    for (i = 0; i < str.length; i++) {
-        newStr += str[i][0].toUpperCase();
+// function abbrev(phrase) {
+//     let str = phrase.split(' ');
+//     let newStr = [];
+//     for (i = 0; i < str.length; i++) {
+//         newStr += str[i][0].toUpperCase();
+//     }
+//     return newStr;
+// }
+// console.log(abbrev('content management system'));
+
+function abbrev(sentence) {
+    function abbrev(word) {
+        return word[0].toUpperCase(); 
     }
-    return newStr;
+    let words = sentence.split(' '); 
+    // Get a bunch of letters and join them again into string
+    return words.map(abbrev).join(''); 
 }
-console.log(abbrev('content management system'));
+console.log(abbrev(phrase)); 
+
 
 /**
  * Problem #5
@@ -161,10 +176,14 @@ let nums = [-1, 0, 1];
 //     }
 // console.log(boolean(nums));
 
-function boolean(array) {
-    return array = false; 
-} else return array = true; 
-
-
-
-console.log(nums.map(array)); 
+function boolean(nums) {
+    function neg(num) {
+        if (num < 0) {
+            return false; 
+        } else {
+            return true; 
+        }
+        return nums.map(neg);
+    }
+}
+console.log(nums); 
