@@ -6,15 +6,15 @@
  */
 
 let reportCard = [
-  { subject: 'Math', grade: 89 },
-  { subject: 'Improv comedy', grade: 80 },
-  { subject: 'Cooking', grade: 98 },
-  { subject: 'Biology', grade: 98 },
-  { subject: 'Babysitting 101', grade: 100 },
-  { subject: 'An Intro to Outer Space for Congresspeople', grade: 95 },
-  { subject: 'History of South Africa', grade: 79 },
+    { subject: 'Math', grade: 89 },
+    { subject: 'Improv comedy', grade: 80 },
+    { subject: 'Cooking', grade: 98 },
+    { subject: 'Biology', grade: 98 },
+    { subject: 'Babysitting 101', grade: 100 },
+    { subject: 'An Intro to Outer Space for Congresspeople', grade: 95 },
+    { subject: 'History of South Africa', grade: 79 },
 ];
-    
+
 // function card(report) { //function that goes through the array of objects and picks out the subject
 //     let subjects = []; // this creates a new array for you to store the data in 
 //     for(let i = 0; i < report.length; i++) { //loop that goes through entire report
@@ -26,10 +26,10 @@ let reportCard = [
 // console.log(card(reportCard)); // prints out the card function for the report card array
 
 function subjects(card) {
-    return card.subject; 
+    return card.subject;
 }
-console.log(reportCard.map(subjects)); 
-    
+console.log(reportCard.map(subjects));
+
 
 
 /**
@@ -43,16 +43,16 @@ console.log(reportCard.map(subjects));
 
 
 items = [
-  { name: 'Portugese Sand Worms', price: 9.98 },
-  { name: 'Honey', price: 4.41 },
-  { name: 'Banana pudding', price: 11.81 },
-  { name: 'Honey', price: 4.89 },
-  { name: 'Golden Grahams', price: 10.60 },
-  { name: 'Granola Souffle', price: 9.19 },
-  { name: 'Maine Lobster', price: 3.99 },
-  { name: 'Ceviche', price: 14.90 },
-  { name: 'Yeti ribs', price: 29.97 },
-  { name: 'Quinoa', price: 7.19 },
+    { name: 'Portugese Sand Worms', price: 9.98 },
+    { name: 'Honey', price: 4.41 },
+    { name: 'Banana pudding', price: 11.81 },
+    { name: 'Honey', price: 4.89 },
+    { name: 'Golden Grahams', price: 10.60 },
+    { name: 'Granola Souffle', price: 9.19 },
+    { name: 'Maine Lobster', price: 3.99 },
+    { name: 'Ceviche', price: 14.90 },
+    { name: 'Yeti ribs', price: 29.97 },
+    { name: 'Quinoa', price: 7.19 },
 ];
 
 // function addTax(groceries) {
@@ -68,13 +68,13 @@ items = [
 // console.log(addTax(items)); 
 
 function addTax(prices) {
-    return prices * .1; 
+    return prices * .1;
 }
 
 function getName(names) {
-    return names.name; 
+    return names.name;
 }
-console.log(items.map(getName, addTax)); 
+console.log(items.map(getName, addTax));
 
 
 /**
@@ -84,7 +84,7 @@ console.log(items.map(getName, addTax));
  * example, the array [5, 9, 'hello'] would return [0, 0, 0].
  */
 
-let values = [5, 9, 'hello']; 
+let values = [5, 9, 'hello'];
 
 // function replace(array) {
 //     let newValue = []; 
@@ -95,10 +95,10 @@ let values = [5, 9, 'hello'];
 // }
 // console.log(replace(values)); 
 
-let array = values.map(function(replace){
-    return values = 0; 
-}); 
-console.log(array); 
+let array = values.map(function (replace) {
+    return values = 0;
+});
+console.log(array);
 
 // function replace(array) {
 //     return .push(0); 
@@ -115,14 +115,14 @@ console.log(array);
 // let string = 'content management system'; 
 
 function abbrev(phrase) {
-    let str = phrase.split(' '); 
-    let newStr = []; 
+    let str = phrase.split(' ');
+    let newStr = [];
     for (i = 0; i < str.length; i++) {
-        newStr += str[i][0].toUpperCase(); 
+        newStr += str[i][0].toUpperCase();
     }
-    return newStr; 
+    return newStr;
 }
-console.log(abbrev('content management system')); 
+console.log(abbrev('content management system'));
 
 /**
  * Problem #5
@@ -132,14 +132,14 @@ console.log(abbrev('content management system'));
  */
 
 function remove(phrase) {
-    let str = phrase.split(''); 
-    let newStr = []; 
+    let str = phrase.split('');
+    let newStr = [];
     for (i = 0; i < str.length; i++) {
-        newStr = phrase.replace (/[\.\,\?!\s]/g, " "); //
+        newStr = phrase.replace(/[\.\,\?!\s]/g, " "); //
     }
-    return newStr; 
+    return newStr;
 }
-console.log(remove('Wow! Tonight, all of the punctuation will be gone.')); 
+console.log(remove('Wow! Tonight, all of the punctuation will be gone.'));
 
 /**
  * Problem #6
@@ -148,17 +148,23 @@ console.log(remove('Wow! Tonight, all of the punctuation will be gone.'));
  * each number is negative (true if yes, false if no).
  */
 
-let nums = [-1, 0, 1]; 
+let nums = [-1, 0, 1];
+
+// function boolean(array) {
+//     let number = [];
+//     for (i = 0; i < array.length; i++) {
+//         if (array[i] < 0) {
+//             number.push(true);
+//         } else (number.push(false)); 
+//     }
+//     return number; 
+//     }
+// console.log(boolean(nums));
 
 function boolean(array) {
-    let number = []; 
-    for (i = 0; i < array.length; i++) {
-        if(array[i] < 0) {
-            let negative = true;
-            number.push(negative); 
-        }
-        return number; 
-    }
-}
-console.log(boolean(nums)); 
+    return array = false; 
+} else return array = true; 
 
+
+
+console.log(nums.map(array)); 
