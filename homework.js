@@ -161,3 +161,4 @@ function boolean(array) {
     }
 }
 console.log(boolean(nums)); 
+
